@@ -2,8 +2,8 @@ package application.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import application.model.tarefa;
+import application.model.Tarefa;
 
-public interface TarefaRepository extends CrudRepository<tarefa, Long>{
+public interface TarefaRepository extends CrudRepository<Tarefa, Long>{
     
 }

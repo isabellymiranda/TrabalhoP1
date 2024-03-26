@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 
 @Entity
 @Table(name="compromissos")
-public class compromisso {
+public class Compromisso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
