@@ -24,16 +24,19 @@ public class TarefaController {
         return (List<Tarefa>) tarefaRepo.findAll();
     }
 
+    @SuppressWarnings("null")
     @GetMapping("/tarefas/{id}")
     public Tarefa getTarefa(@PathVariable Long id){
         return tarefaRepo.findById(id).get();
     }
 
+    @SuppressWarnings("null")
     @PostMapping("/tarefas")
     public Tarefa postTarefa(@RequestBody Tarefa tarefa){
         return tarefaRepo.save(tarefa);
     }
 
+    @SuppressWarnings("null")
     @PutMapping("/tarefas/{id}")
     public Tarefa putTarefas(@RequestBody Tarefa tarefa, @PathVariable Long id){
         Tarefa resposta = tarefaRepo.findById(id).get();
@@ -43,6 +46,7 @@ public class TarefaController {
         return tarefaRepo.save(resposta);
     }
 
+    @SuppressWarnings("null")
     @DeleteMapping("/tarefas/{id}")
     public void deleteTarefas(@PathVariable Long id){
         tarefaRepo.deleteById(id);
