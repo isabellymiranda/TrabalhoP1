@@ -1,27 +1,27 @@
-
 package application.model;
 
 import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name="compromissos")
 public class Compromisso {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+
+    private Long id;
     private String descricao;
     private String dataInicio;
     private String dataFim;
     private String horaInicio;
     private String horaFim;
-    public long getId() {
+    public Long getId() {
         return id;
     }
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getDescricao() {
@@ -54,6 +54,5 @@ public class Compromisso {
     public void setHoraFim(String horaFim) {
         this.horaFim = horaFim;
     }
-    
-    
+
 }
