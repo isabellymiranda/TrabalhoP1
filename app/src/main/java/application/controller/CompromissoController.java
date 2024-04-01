@@ -24,13 +24,11 @@ public class CompromissoController {
         return (List<Compromisso>) comproRepo.findAll();
     }
 
-    @SuppressWarnings("null")
     @GetMapping("/compromissos/{id}")
     public Compromisso getCompromissos(@PathVariable Long id){
         return comproRepo.findById(id).get();
     }
 
-    @SuppressWarnings("null")
     @PostMapping("/compromissos")
     public Compromisso postCompromissos(@RequestBody Compromisso compromisso){
         return comproRepo.save(compromisso);
@@ -38,7 +36,6 @@ public class CompromissoController {
 
     @PutMapping("/compromissos/{id}")
     public Compromisso putCompromisso(@RequestBody Compromisso compromisso, @PathVariable Long id){
-        @SuppressWarnings("null")
         Compromisso resposta = comproRepo.findById(id).get();
         resposta.setDescricao(resposta.getDescricao());
         resposta.setDataInicio(resposta.getDataInicio());
@@ -49,7 +46,6 @@ public class CompromissoController {
         return comproRepo.save(resposta);
     }
 
-    @SuppressWarnings("null")
     @DeleteMapping("/compromissos/{id}")
     public void deleteCompromisso(@PathVariable Long id){
         comproRepo.deleteById(id);
