@@ -1,0 +1,12 @@
+POST https://8080-isabellymira-trabalhop1-25mj1389yzg.ws-us110.gitpod.io/compromissos
+Content-Type: application/json
+
+
+{
+    "descricao": "Descrição do Compromisso 2",
+    "dataInicio": "01/04/24",
+    "dataFim": "20/04/24",
+    "horaInicio": "00:00",
+    "horaFim": "13:00"
+}
+
